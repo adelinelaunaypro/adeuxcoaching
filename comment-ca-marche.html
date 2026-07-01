@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comment ça marche · Ad'eux Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Comment se déroule un accompagnement chez Ad'eux Coaching : appel découverte offert, séance préliminaire, séances de coaching et bilan. Tes questions fréquentes.">
+<meta name="author" content="Ad'eux Coaching">
+<link rel="canonical" href="https://adeux-coaching.fr/comment-ca-marche.html">
+<meta name="theme-color" content="#FAEEDA">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Ad'eux Coaching">
+<meta property="og:title" content="Comment ça marche · Ad'eux Coaching">
+<meta property="og:description" content="Comment se déroule un accompagnement chez Ad'eux Coaching : appel découverte offert, séance préliminaire, séances de coaching et bilan. Tes questions fréquentes.">
+<meta property="og:url" content="https://adeux-coaching.fr/comment-ca-marche.html">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --cream:#FAEEDA;--cream-deep:#F2E2C5;--terracotta:#C85A2A;--terracotta-soft:rgba(200,90,42,0.25);
+    --violet:#5048A8;--violet-deep:#3B3580;--ink:#332B22;--ink-soft:#6B6357;--ink-faint:rgba(51,43,34,0.38);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--cream);color:var(--ink);font-family:'Jost',sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.18;}
+  .em{font-family:'Cormorant Garamond',serif;font-style:italic;}
+  .container{max-width:1100px;margin:0 auto;padding:0 32px;}
+  .eyebrow{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);}
+  .btn{display:inline-block;font-family:'Jost',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:14px 32px;border-radius:3px;cursor:pointer;transition:all .22s ease;}
+  .btn-violet{background:var(--violet);color:#fff;}
+  .btn-violet:hover{background:var(--violet-deep);}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid rgba(51,43,34,0.1);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .logo{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;}
+  .logo span{color:var(--violet);}
+  .logo img{height:36px;width:auto;display:block;}
+  nav{display:flex;gap:32px;align-items:center;}
+  nav a{font-size:0.88rem;font-weight:500;color:var(--ink-soft);transition:color .18s;}
+  nav a:hover{color:var(--violet);}
+
+  /* HERO PAGE */
+  .page-hero{padding:72px 0 56px;text-align:center;}
+  .page-hero h1{font-size:clamp(2rem,4vw,3rem);margin:14px 0 16px;}
+  .page-hero p{color:var(--ink-soft);max-width:500px;margin:0 auto;font-size:1.02rem;}
+
+  /* PROCESS STEPS */
+  .process{padding:64px 0 80px;}
+  .steps-wrapper{position:relative;max-width:680px;margin:0 auto;}
+
+  /* fil pointillés */
+  .steps-wrapper::before{
+    content:'';position:absolute;left:28px;top:48px;bottom:48px;width:2px;
+    background:repeating-linear-gradient(to bottom,var(--terracotta) 0,var(--terracotta) 6px,transparent 6px,transparent 14px);
+    opacity:0.5;
+  }
+
+  .step{display:flex;gap:32px;align-items:flex-start;margin-bottom:52px;position:relative;}
+  .step:last-child{margin-bottom:0;}
+  .step-icon{width:58px;height:58px;border-radius:50%;background:var(--cream-deep);border:2px solid var(--terracotta);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;}
+  .step-icon span{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--terracotta);}
+  .step-body{padding-top:6px;}
+  .step-tag{display:inline-block;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--terracotta);margin-bottom:6px;}
+  .step-body h3{font-size:1.2rem;margin-bottom:8px;}
+  .step-body p{color:var(--ink-soft);font-size:0.95rem;line-height:1.65;}
+  .step-detail{margin-top:10px;font-size:0.85rem;color:var(--ink-faint);font-style:italic;}
+
+  /* FAQ */
+  .faq{background:var(--cream-deep);padding:72px 0;border-top:1px solid var(--terracotta-soft);}
+  .faq-head{text-align:center;max-width:520px;margin:0 auto 44px;}
+  .faq-head h2{font-size:clamp(1.5rem,3vw,2rem);margin-top:10px;}
+  .faq-list{max-width:720px;margin:0 auto;}
+  details{border-bottom:1px solid rgba(51,43,34,0.12);}
+  details:first-of-type{border-top:1px solid rgba(51,43,34,0.12);}
+  summary{list-style:none;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Playfair Display',serif;font-size:1.02rem;font-weight:600;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:'+';font-family:'Jost',sans-serif;font-size:1.4rem;font-weight:300;color:var(--terracotta);flex-shrink:0;transition:transform .2s;}
+  details[open] summary::after{transform:rotate(45deg);}
+  .faq-answer{padding:0 0 22px;color:var(--ink-soft);font-size:0.95rem;line-height:1.75;}
+  .faq-answer p+p{margin-top:10px;}
+
+  /* FINAL CTA */
+  .page-cta{padding:88px 0;text-align:center;}
+  .page-cta h2{font-size:clamp(1.6rem,3vw,2.2rem);max-width:480px;margin:14px auto 16px;}
+  .page-cta p{color:var(--ink-soft);max-width:400px;margin:0 auto 32px;}
+  .page-cta-note{margin-top:12px;font-size:0.82rem;color:var(--ink-faint);}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:48px 0 32px;}
+  .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px;}
+  .footer-brand .logo{color:#fff;}
+  .footer-brand p{margin-top:12px;font-size:0.88rem;max-width:260px;line-height:1.6;}
+  .footer-col h4{font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;}
+  .footer-col a,.footer-col p{display:block;font-size:0.88rem;margin-bottom:8px;color:rgba(255,255,255,0.65);transition:color .18s;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;font-size:0.78rem;color:rgba(255,255,255,0.35);}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(max-width:768px){
+    .steps-wrapper::before{left:24px;}
+    nav .btn{display:none;}
+    .footer-inner{grid-template-columns:1fr;}
+  }
+</style>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="logo.png" alt="Ad'eux Coaching"></a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="comment-ca-marche.html">Comment ça marche</a>
+        <a href="offres.html">Mes offres</a>
+        <a href="about.html">Mon histoire</a>
+        <a href="#page-cta" class="btn btn-violet">Échange offert</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO PAGE -->
+<section class="page-hero">
+  <div class="container reveal">
+    <p class="eyebrow">Le processus</p>
+    <h1>Comment ça marche ?</h1>
+    <p>Un accompagnement en quatre temps, pensé pour avancer à ton rythme, en confiance.</p>
+  </div>
+</section>
+
+<!-- ÉTAPES -->
+<section class="process">
+  <div class="container">
+    <div class="steps-wrapper">
+
+      <div class="step reveal">
+        <div class="step-icon"><span>1</span></div>
+        <div class="step-body">
+          <span class="step-tag">Pour commencer</span>
+          <h3>L'appel découverte</h3>
+          <p>On se rencontre en visio pendant 30 minutes. Tu me parles de ta situation, je t'explique ma façon de travailler. C'est le moment de voir si on est faites pour avancer ensemble.</p>
+          <p class="step-detail">Offert · Sans engagement · 30 minutes</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-icon"><span>2</span></div>
+        <div class="step-body">
+          <span class="step-tag">Poser les bases</span>
+          <h3>La séance préliminaire</h3>
+          <p>On définit ensemble le cadre de l'accompagnement : tes objectifs, le rythme des séances, et ce sur quoi tu veux vraiment travailler. C'est là qu'on construit les fondations.</p>
+          <p class="step-detail">1h · En visio · Le rythme est défini ici</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-icon"><span>3</span></div>
+        <div class="step-body">
+          <span class="step-tag">Le cœur du travail</span>
+          <h3>Les séances de coaching</h3>
+          <p>4 à 6 séances d'une heure au rythme défini ensemble lors de la séance préliminaire. Chaque séance est un espace de travail sur toi, sans agenda préétabli, à partir de ce que tu traverses vraiment.</p>
+          <p class="step-detail">4 à 6 séances d'1h · Rythme personnalisé · En visio</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-icon"><span>4</span></div>
+        <div class="step-body">
+          <span class="step-tag">Pour ancrer</span>
+          <h3>La séance bilan</h3>
+          <p>On revient ensemble sur le chemin parcouru. Ce qui a changé, ce qui reste à explorer, ce que tu emportes. Ce n'est pas une fin, c'est une mise en perspective de tout ce que tu as construit.</p>
+          <p class="step-detail">1h · En visio · Pour conclure le parcours</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="faq-head reveal">
+      <p class="eyebrow">Tes questions</p>
+      <h2>Ce qu'on me demande souvent</h2>
+    </div>
+    <div class="faq-list reveal">
+
+      <details>
+        <summary>Comment se déroule concrètement une séance ?</summary>
+        <div class="faq-answer">
+          <p>Chaque séance dure une heure et se passe en visio. Je ne viens pas avec un plan ou des exercices préparés à l'avance, je pars de ce que tu apportes ce jour-là. On travaille à partir de là où tu en es, pas d'où je pense que tu devrais en être.</p>
+          <p>C'est un espace qui t'appartient entièrement.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Combien de temps dure un accompagnement ?</summary>
+        <div class="faq-answer">
+          <p>Il n'y a pas de durée fixe imposée d'avance. La séance préliminaire sert justement à définir ce qui fait sens pour toi, en général, on travaille sur 3 mois avec 4 à 6 séances, mais c'est toujours ajusté à ta réalité.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Est-ce que tu travailles uniquement avec des femmes en retour de congé maternité ?</summary>
+        <div class="faq-answer">
+          <p>Non, même si c'est le cœur de ce qui m'anime. J'accompagne plus largement toutes les femmes qui vivent une transition professionnelle : reconversion, perte de sens, questionnement profond sur leur place au travail.</p>
+          <p>Ce qui compte, c'est que tu sois prête à travailler sur toi.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Quelle est la différence entre le coaching et la thérapie ?</summary>
+        <div class="faq-answer">
+          <p>Le coaching se concentre sur le présent et l'avenir : on part de là où tu en es aujourd'hui pour construire là où tu veux aller. La thérapie travaille davantage sur le passé et les origines de ce que tu vis.</p>
+          <p>Si tu traverses quelque chose de difficile sur le plan psychologique, je peux t'orienter vers les bons professionnels, ce ne serait pas honnête de ma part de faire semblant que le coaching répond à tout.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Est-ce que ce qu'on dit en séance reste confidentiel ?</summary>
+        <div class="faq-answer">
+          <p>Oui, absolument. Tout ce que tu partages en séance reste strictement entre nous. C'est une condition non négociable de ma pratique, et c'est ce qui rend possible un travail en profondeur.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Je ne sais pas encore si je suis prête. Par quoi commencer ?</summary>
+        <div class="faq-answer">
+          <p>Par l'appel découverte, c'est fait pour ça. Pas d'engagement, pas de pression. On se parle 30 minutes et on voit ensemble si c'est le bon moment pour toi, et si ma façon de travailler te correspond.</p>
+          <p>Il n'y a pas de mauvais moment pour commencer à se questionner.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="page-cta" id="page-cta">
+  <div class="container reveal">
+    <p class="eyebrow">Prochaine étape</p>
+    <h2>Prête à faire le premier pas ?</h2>
+    <p>L'appel découverte est offert. 30 minutes pour se rencontrer, sans engagement.</p>
+    <a href="mailto:contact@adeux-coaching.fr?subject=Échange découverte offert" class="btn btn-violet">Réserver mon échange offert</a>
+    <p class="page-cta-note">30 minutes · sans engagement · 100% visio</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Ad'eux <span style="color:rgba(80,72,168,0.4)">Coaching</span></div>
+        <p>Coaching individuel pour femmes en transition professionnelle. 100% en visio.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Naviguer</h4>
+        <a href="index.html">Accueil</a>
+        <a href="comment-ca-marche.html">Comment ça marche</a>
+        <a href="offres.html">Mes offres</a>
+        <a href="about.html">Mon histoire</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>contact@adeux-coaching.fr</p>
+        <a href="#page-cta">Réserver un échange gratuit</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ad'eux Coaching. Tous droits réservés.</span>
+      <span>Mentions légales · Politique de confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target);}
+    });
+  },{threshold:0.1});
+  reveals.forEach(el=>io.observe(el));
+  // Failsafe : ne jamais laisser le contenu masqué (ex. IntersectionObserver bridé)
+  function _snap(el){el.style.transition='none';el.classList.add('in');}
+  function _revealVisible(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top < window.innerHeight) _snap(el);});}
+  window.addEventListener('load', _revealVisible);
+  setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(_snap);}, 1500);
+</script>
+</body>
+</html>

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ad'eux Coaching — Accompagnement individuel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <meta name="description" content="Coaching individuel pour femmes en transition professionnelle après un congé maternité. Retrouve ta place, avec clarté. Appel découverte offert, 100% en visio." />
+  <meta name="author" content="Ad'eux Coaching" />
+  <link rel="canonical" href="https://adeux-coaching.fr/" />
+  <meta name="theme-color" content="#FAEEDA" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Ad'eux Coaching" />
+  <meta property="og:title" content="Ad'eux Coaching — Accompagnement individuel" />
+  <meta property="og:description" content="Après un congé maternité, une transition — quelque chose a bougé. On t'accompagne pour retrouver ta place, avec clarté." />
+  <meta property="og:url" content="https://adeux-coaching.fr/" />
+  <meta name="twitter:card" content="summary" />
+  <style>
+    /* ── Design tokens ── */
+    :root {
+      --cream:      #FAEEDA;
+      --terracotta: #C85A2A;
+      --violet:     #5048A8;
+      --violet-dark:#3A3480;
+      --ink:        #1E1A2E;
+      --muted:      #6B6578;
+      --divider:    rgba(80,72,168,0.12);
+
+      --f-display: 'Playfair Display', Georgia, serif;
+      --f-accent:  'Cormorant Garamond', Georgia, serif;
+      --f-body:    'Jost', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--f-body);
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 1px solid var(--divider);
+      padding: 0 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--f-display);
+      font-size: 1.15rem;
+      color: var(--violet);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--f-body);
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--violet); }
+    .nav-cta {
+      background: var(--violet);
+      color: #fff !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 2px;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--violet-dark) !important; color: #fff !important; }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 5vw 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(80,72,168,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 780px;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-family: var(--f-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 {
+      font-family: var(--f-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--violet);
+    }
+    .hero-sub {
+      font-family: var(--f-accent);
+      font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+      font-style: italic;
+      color: var(--muted);
+      max-width: 580px;
+      margin-bottom: 2.4rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--violet);
+      color: #fff;
+      font-family: var(--f-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.9rem 2rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--violet-dark); transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-block;
+      border: 1.5px solid var(--violet);
+      color: var(--violet);
+      font-family: var(--f-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.85rem 2rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      margin-left: 1rem;
+    }
+    .btn-ghost:hover { background: var(--violet); color: #fff; }
+    .hero-note {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── Section base ── */
+    section { padding: 5rem 5vw; }
+    .section-inner { max-width: 860px; margin: 0 auto; }
+    .section-label {
+      font-family: var(--f-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.8rem;
+    }
+    h2.section-title {
+      font-family: var(--f-display);
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+    h2.section-title em { font-style: italic; color: var(--violet); }
+    .section-intro {
+      font-family: var(--f-accent);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      max-width: 640px;
+    }
+
+    /* ── Recognition section ── */
+    .recognition { background: #fff; }
+    .recog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--divider);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .recog-col {
+      padding: 2.5rem 2rem;
+    }
+    .recog-col:first-child {
+      border-right: 1px solid var(--divider);
+    }
+    .recog-col h3 {
+      font-family: var(--f-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      color: var(--ink);
+    }
+    .recog-col h3.negative { color: var(--terracotta); }
+    .recog-col h3.positive { color: var(--violet); }
+    .recog-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .recog-list li {
+      font-size: 0.95rem;
+      padding-left: 1.4rem;
+      position: relative;
+      color: var(--ink);
+    }
+    .recog-list li::before {
+      content: attr(data-marker);
+      position: absolute;
+      left: 0;
+      color: var(--terracotta);
+      font-size: 1rem;
+    }
+    .recog-list.wants li::before { color: var(--violet); }
+
+    /* ── Offer detail section ── */
+    .offer-detail { background: var(--cream); }
+    .offer-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .offer-block {
+      border-left: 3px solid var(--divider);
+      padding-left: 2rem;
+    }
+    .offer-block.violet-accent { border-left-color: var(--violet); }
+    .offer-block.terra-accent { border-left-color: var(--terracotta); }
+    .offer-block h3 {
+      font-family: var(--f-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .offer-block p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .offer-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin-top: 0.5rem;
+    }
+    .offer-items li {
+      font-size: 0.95rem;
+      padding-left: 1.4rem;
+      position: relative;
+    }
+    .offer-items li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--violet);
+      font-size: 0.85rem;
+      top: 2px;
+    }
+
+    /* ── Accompaniment contents ── */
+    .accompaniment { background: #fff; }
+    .acc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .acc-card {
+      background: var(--cream);
+      border-radius: 4px;
+      padding: 1.5rem 1.4rem;
+    }
+    .acc-card .acc-number {
+      font-family: var(--f-display);
+      font-size: 2rem;
+      color: var(--violet);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+    .acc-card h4 {
+      font-family: var(--f-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .acc-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* ── Process strip ── */
+    .process { background: var(--cream); }
+    .process-steps {
+      display: flex;
+      gap: 0;
+      margin-top: 2.5rem;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 22px; left: 44px; right: 44px;
+      height: 1px;
+      background: var(--divider);
+    }
+    .p-step {
+      flex: 1;
+      text-align: center;
+      padding: 0 0.8rem;
+    }
+    .p-step-dot {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 2px solid var(--violet);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-family: var(--f-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--violet);
+      position: relative;
+      z-index: 1;
+    }
+    .p-step h4 {
+      font-family: var(--f-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+    .p-step p {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── About strip ── */
+    .about-strip {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .about-strip-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-placeholder {
+      aspect-ratio: 3/4;
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(250,238,218,0.3);
+      font-size: 0.8rem;
+      font-family: var(--f-body);
+      letter-spacing: 0.08em;
+      text-align: center;
+      padding: 1rem;
+    }
+    .about-text .section-label { color: var(--terracotta); }
+    .about-text h2 {
+      font-family: var(--f-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--cream);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .about-text p {
+      font-size: 0.95rem;
+      color: rgba(250,238,218,0.75);
+      margin-bottom: 1rem;
+    }
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.4rem;
+    }
+    .about-tag {
+      font-size: 0.78rem;
+      font-family: var(--f-body);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(250,238,218,0.25);
+      color: rgba(250,238,218,0.7);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+    }
+
+    /* ── Testimonials ── */
+    .testimonials { background: #fff; }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .testi-card {
+      border: 1px solid var(--divider);
+      border-radius: 4px;
+      padding: 1.8rem 1.6rem;
+    }
+    .testi-quote {
+      font-family: var(--f-accent);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+    .testi-quote::before { content: '\201C'; color: var(--terracotta); margin-right: 2px; }
+    .testi-quote::after { content: '\201D'; color: var(--terracotta); margin-left: 2px; }
+    .testi-author {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    /* ── CTA finale ── */
+    .final-cta {
+      background: var(--violet);
+      text-align: center;
+      padding: 5rem 5vw;
+    }
+    .final-cta .section-label { color: rgba(255,255,255,0.6); }
+    .final-cta h2 {
+      font-family: var(--f-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: #fff;
+      margin-bottom: 0.8rem;
+      line-height: 1.2;
+    }
+    .final-cta p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 480px;
+      margin: 0 auto 2rem;
+    }
+    .btn-light {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--violet);
+      font-family: var(--f-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.9rem 2.2rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-light:hover { opacity: 0.88; }
+    .final-cta-note {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      padding: 2.5rem 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-logo {
+      font-family: var(--f-display);
+      font-size: 1rem;
+      color: var(--cream);
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: rgba(250,238,218,0.45);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .footer-links a:hover { color: rgba(250,238,218,0.8); }
+
+    /* ── Divider ── */
+    hr.section-divider {
+      border: none;
+      border-top: 1px solid var(--divider);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .recog-grid { grid-template-columns: 1fr; }
+      .recog-col:first-child { border-right: none; border-bottom: 1px solid var(--divider); }
+      .process-steps { flex-direction: column; gap: 1.5rem; }
+      .process-steps::before { display: none; }
+      .about-strip-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .about-placeholder { aspect-ratio: 2/1; }
+      .btn-ghost { margin-left: 0; margin-top: 0.8rem; display: block; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="index.html" class="nav-logo">Ad'eux Coaching</a>
+    <ul class="nav-links">
+      <li><a href="comment-ca-marche.html">Comment ça marche</a></li>
+      <li><a href="offres.html">Offres</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="#decouverte" class="nav-cta">Appel découverte</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Coaching professionnel individuel</span>
+      <h1>De retour au travail.<br>Mais tu ne te reconnais<br><em>plus tout à fait.</em></h1>
+      <p class="hero-sub">Après un congé maternité, après une transition, quelque chose a bougé. Je t'accompagne pour retrouver ta place, avec clarté.</p>
+      <a href="#decouverte" class="btn-primary">Réserver un appel découverte</a>
+      <a href="comment-ca-marche.html" class="btn-ghost">Découvrir l'accompagnement</a>
+      <p class="hero-note">30 minutes, en visio, sans engagement.</p>
+    </div>
+  </section>
+
+  <!-- Recognition -->
+  <section class="recognition">
+    <div class="section-inner">
+      <p class="section-label">Tu te reconnais ?</p>
+      <h2 class="section-title">Ce que tu vis en ce moment</h2>
+      <p class="section-intro">Pas besoin de tout avoir mis en mots pour commencer.</p>
+
+      <div class="recog-grid">
+        <div class="recog-col">
+          <h3 class="negative">Ce que tu ressens</h3>
+          <ul class="recog-list">
+            <li data-marker="·">Tu te sens décalée, comme si tu avais perdu le fil de qui tu étais avant.</li>
+            <li data-marker="·">Tu culpabilises de vouloir autre chose, ou de ne pas savoir quoi.</li>
+            <li data-marker="·">Tu dis oui trop souvent, tu t'oublies, tu t'épuises à t'adapter.</li>
+            <li data-marker="·">Tu veux du changement, mais tu ne sais pas par où commencer.</li>
+            <li data-marker="·">Tu as l'impression que tout le monde avance, sauf toi.</li>
+          </ul>
+        </div>
+        <div class="recog-col">
+          <h3 class="positive">Ce que tu veux</h3>
+          <ul class="recog-list wants">
+            <li data-marker="·">Retrouver du sens dans ta vie professionnelle.</li>
+            <li data-marker="·">T'affirmer sans t'excuser, sans culpabilité.</li>
+            <li data-marker="·">Faire des choix alignés avec ce que tu es vraiment.</li>
+            <li data-marker="·">Reprendre confiance dans ta direction.</li>
+            <li data-marker="·">Te reconnecter à ce qui te fait vibrer.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- Offer detail -->
+  <section class="offer-detail">
+    <div class="section-inner">
+      <p class="section-label">L'accompagnement</p>
+      <h2 class="section-title">Comment je <em>travaille avec toi</em></h2>
+      <p class="section-intro">Un espace pour toi seule, structuré et flexible.</p>
+
+      <div class="offer-blocks">
+        <div class="offer-block terra-accent">
+          <h3>Je pose les fondations</h3>
+          <p>Je commence par une séance préliminaire pour faire le point sur où tu en es, sans jugement, sans agenda préétabli. Tu arrives avec ce que tu veux, et je construis à partir de là.</p>
+          <ul class="offer-items">
+            <li>Clarifier ce qui te pèse, ce qui te manque, ce que tu veux</li>
+            <li>Mettre des mots clairs sur tes peurs, tes valeurs, tes besoins</li>
+            <li>Définir une intention pour l'accompagnement</li>
+          </ul>
+        </div>
+
+        <div class="offer-block violet-accent">
+          <h3>J'avance avec toi, étape par étape</h3>
+          <p>4 à 6 séances de coaching individuel d'1h, à ton rythme sur 3 mois. Chaque séance a un fil directeur, mais reste entièrement adaptée à ce qui émerge pour toi.</p>
+          <ul class="offer-items">
+            <li>Sortir du "fais plaisir", du "sois parfaite", du "dépêche-toi"</li>
+            <li>Faire le tri entre ce qui compte vraiment et ce qui te pèse</li>
+            <li>Apprendre à t'affirmer sans t'excuser</li>
+            <li>Reconnecter action et sens dans ton quotidien professionnel</li>
+          </ul>
+        </div>
+
+        <div class="offer-block">
+          <h3>J'ancre ce qui a changé</h3>
+          <p>La séance de bilan n'est pas une conclusion, c'est un point de départ. Je fais le point avec toi sur le chemin parcouru, ce qui a changé, et je t'aide à poser un plan d'action réaliste.</p>
+          <ul class="offer-items">
+            <li>Bilan de ce qui a vraiment bougé en toi</li>
+            <li>Plan d'action concret et assumé</li>
+            <li>Tu repars avec de la clarté, pas une liste de tâches</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accompaniment contents -->
+  <section class="accompaniment">
+    <div class="section-inner">
+      <p class="section-label">Ce que comprend l'accompagnement</p>
+      <h2 class="section-title">Un cadre pensé pour <em>toi</em></h2>
+
+      <div class="acc-grid">
+        <div class="acc-card">
+          <div class="acc-number">01</div>
+          <h4>Séance préliminaire</h4>
+          <p>Un premier rendez-vous pour poser les bases et définir ton intention.</p>
+        </div>
+        <div class="acc-card">
+          <div class="acc-number">04–06</div>
+          <h4>Séances de coaching</h4>
+          <p>En visio, 1h chacune, à ton rythme sur 3 mois.</p>
+        </div>
+        <div class="acc-card">
+          <div class="acc-number">∞</div>
+          <h4>Suivi entre séances</h4>
+          <p>Des exercices personnalisés et un espace d'échange entre les rendez-vous.</p>
+        </div>
+        <div class="acc-card">
+          <div class="acc-number">01</div>
+          <h4>Séance de bilan</h4>
+          <p>Pour consolider, regarder le chemin et repartir avec un plan ancré.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <a href="#decouverte" class="btn-primary">Démarrer par un appel découverte</a>
+        <p style="margin-top: 0.8rem; font-size: 0.8rem; color: var(--muted);">30 min en visio · Gratuit · Sans engagement</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process">
+    <div class="section-inner">
+      <p class="section-label">Les étapes</p>
+      <h2 class="section-title">De la première rencontre<br><em>à la clarté retrouvée</em></h2>
+
+      <div class="process-steps">
+        <div class="p-step">
+          <div class="p-step-dot">1</div>
+          <h4>Appel découverte</h4>
+          <p>30 min pour voir si on est faites pour avancer ensemble.</p>
+        </div>
+        <div class="p-step">
+          <div class="p-step-dot">2</div>
+          <h4>Séance préliminaire</h4>
+          <p>Bilan de départ, intention, cadre de travail.</p>
+        </div>
+        <div class="p-step">
+          <div class="p-step-dot">3</div>
+          <h4>Séances de coaching</h4>
+          <p>4 à 6 séances sur 3 mois, à ton rythme.</p>
+        </div>
+        <div class="p-step">
+          <div class="p-step-dot">4</div>
+          <h4>Séance de bilan</h4>
+          <p>Plan d'action, ancrage, perspectives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about-strip">
+    <div class="about-strip-inner">
+      <div class="about-placeholder"><img src="adeline.jpg" alt="Adeline, coach chez Ad'eux Coaching" style="width:100%;height:100%;object-fit:cover;object-position:center 12%;" /></div>
+      <div class="about-text">
+        <p class="section-label">À propos</p>
+        <h2>Je suis Adeline, coach ICF et professionnelle RH depuis plus de 10 ans.</h2>
+        <p>J'ai vécu de l'intérieur ce moment où l'on revient d'un congé maternité et où quelque chose a changé, mais on ne sait pas encore quoi, ni comment le nommer.</p>
+        <p>C'est de là qu'est née Ad'eux Coaching : un espace où ce que tu traverses a une place. Pas pour tout régler, mais pour t'aider à te remettre au centre.</p>
+        <div style="margin-top: 1.8rem;">
+          <a href="about.html" style="color: var(--cream); font-size: 0.88rem; font-family: var(--f-body); text-decoration: underline; text-underline-offset: 4px;">Mon parcours en détail →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="section-inner">
+      <p class="section-label">Ce qu'elles en disent</p>
+      <h2 class="section-title">Des femmes qui ont <em>repris leur place</em></h2>
+
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p class="testi-quote">Je suis repartie avec quelque chose de solide, pas des réponses toutes faites, mais une vraie clarté sur ce qui m'appartient et ce que je veux faire de ma carrière.</p>
+          <p class="testi-author">— Prénom, fonction</p>
+        </div>
+        <div class="testi-card">
+          <p class="testi-quote">J'avais peur que le coaching ne soit qu'une conversation de plus. C'était tout l'inverse : structuré, ancré dans le réel, et profondément utile.</p>
+          <p class="testi-author">— Prénom, fonction</p>
+        </div>
+        <div class="testi-card">
+          <p class="testi-quote">Adeline m'a aidée à nommer ce que je ressentais depuis des mois sans y arriver. Ça a tout changé dans ma façon d'aborder ma transition.</p>
+          <p class="testi-author">— Prénom, fonction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta" id="decouverte">
+    <p class="section-label">Prête à commencer ?</p>
+    <h2>L'appel découverte,<br>c'est 30 minutes pour toi.</h2>
+    <p>Je te rencontre en visio, sans engagement. Tu repars avec de la clarté, quelle que soit la suite.</p>
+    <a href="mailto:contact@adeux-coaching.fr?subject=Appel découverte offert" class="btn-light">Réserver mon appel découverte</a>
+    <p class="final-cta-note">Gratuit · En visio · Sans engagement · Sous 48h de réponse</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-logo">Ad'eux Coaching</span>
+    <ul class="footer-links">
+      <li><a href="comment-ca-marche.html">Comment ça marche</a></li>
+      <li><a href="offres.html">Offres</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="#">Mentions légales</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

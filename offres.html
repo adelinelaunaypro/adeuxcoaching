@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mes offres · Ad'eux Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Deux façons d'avancer ensemble : la Session Boussole (séance unique) et l'Accompagnement sur 3 mois. Coaching 100% en visio pour femmes en transition.">
+<meta name="author" content="Ad'eux Coaching">
+<link rel="canonical" href="https://adeux-coaching.fr/offres.html">
+<meta name="theme-color" content="#FAEEDA">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Ad'eux Coaching">
+<meta property="og:title" content="Mes offres · Ad'eux Coaching">
+<meta property="og:description" content="Deux façons d'avancer ensemble : la Session Boussole (séance unique) et l'Accompagnement sur 3 mois. Coaching 100% en visio pour femmes en transition.">
+<meta property="og:url" content="https://adeux-coaching.fr/offres.html">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --cream:#FAEEDA;--cream-deep:#F2E2C5;--terracotta:#C85A2A;--terracotta-soft:rgba(200,90,42,0.2);
+    --violet:#5048A8;--violet-deep:#3B3580;--ink:#332B22;--ink-soft:#6B6357;--ink-faint:rgba(51,43,34,0.38);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--cream);color:var(--ink);font-family:'Jost',sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.18;}
+  .container{max-width:1100px;margin:0 auto;padding:0 32px;}
+  .eyebrow{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);}
+  .btn{display:inline-block;font-family:'Jost',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:14px 32px;border-radius:3px;cursor:pointer;transition:all .22s ease;}
+  .btn-violet{background:var(--violet);color:#fff;}
+  .btn-violet:hover{background:var(--violet-deep);}
+  .btn-outline-dark{border:1.5px solid var(--ink);color:var(--ink);}
+  .btn-outline-dark:hover{background:var(--ink);color:#fff;}
+  .btn-outline-white{border:1.5px solid rgba(255,255,255,0.6);color:#fff;}
+  .btn-outline-white:hover{background:rgba(255,255,255,0.12);}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid rgba(51,43,34,0.1);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .logo{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;}
+  .logo span{color:var(--violet);}
+  .logo img{height:36px;width:auto;display:block;}
+  nav{display:flex;gap:32px;align-items:center;}
+  nav a{font-size:0.88rem;font-weight:500;color:var(--ink-soft);transition:color .18s;}
+  nav a:hover{color:var(--violet);}
+
+  /* HERO */
+  .page-hero{padding:72px 0 56px;text-align:center;}
+  .page-hero h1{font-size:clamp(2rem,4vw,2.8rem);margin:14px 0 16px;}
+  .page-hero p{color:var(--ink-soft);max-width:520px;margin:0 auto;font-size:1.02rem;}
+
+  /* OFFRES */
+  .offres{padding:32px 0 80px;}
+  .offres-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+
+  .offre-card{border-radius:6px;overflow:hidden;}
+
+  /* Carte claire */
+  .offre-light{background:#fff;border:1px solid rgba(51,43,34,0.1);}
+  .offre-light .offre-header{padding:36px 36px 28px;border-bottom:1px solid rgba(51,43,34,0.08);}
+  .offre-light .offre-body{padding:28px 36px 36px;}
+  .offre-tag{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;}
+  .offre-light h2{font-size:1.55rem;margin-bottom:10px;}
+  .offre-light .offre-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);}
+  .offre-light .offre-desc{color:var(--ink-soft);font-size:0.95rem;margin-bottom:20px;line-height:1.7;}
+  .offre-light ul{list-style:none;margin-bottom:28px;}
+  .offre-light ul li{font-size:0.92rem;padding:9px 0;border-bottom:1px solid rgba(51,43,34,0.07);display:flex;align-items:flex-start;gap:10px;color:var(--ink);}
+  .offre-light ul li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--terracotta);flex-shrink:0;margin-top:8px;}
+  .offre-format{font-size:0.82rem;color:var(--ink-faint);margin-bottom:24px;font-style:italic;}
+  .offre-format span{margin:0 4px;color:var(--terracotta);}
+
+  /* Carte sombre */
+  .offre-dark{background:var(--violet);}
+  .offre-dark .offre-header{padding:36px 36px 28px;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .offre-dark .offre-body{padding:28px 36px 36px;}
+  .offre-dark .offre-tag{color:rgba(238,150,102,0.95);}
+  .offre-dark h2{font-size:1.55rem;margin-bottom:10px;color:#fff;}
+  .offre-dark .offre-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(255,255,255,0.6);}
+  .offre-dark .offre-desc{color:rgba(255,255,255,0.72);font-size:0.95rem;margin-bottom:20px;line-height:1.7;}
+  .offre-dark ul{list-style:none;margin-bottom:28px;}
+  .offre-dark ul li{font-size:0.92rem;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.82);}
+  .offre-dark ul li::before{content:'';width:5px;height:5px;border-radius:50%;background:rgba(238,150,102,0.9);flex-shrink:0;margin-top:8px;}
+  .offre-dark .offre-format{font-size:0.82rem;color:rgba(255,255,255,0.35);margin-bottom:24px;font-style:italic;}
+  .offre-dark .offre-format span{margin:0 4px;color:rgba(238,150,102,0.8);}
+
+  /* DOUTE */
+  .doute{padding:64px 0 80px;}
+  .doute-card{background:var(--violet);border-radius:6px;padding:56px 64px;text-align:center;max-width:700px;margin:0 auto;}
+  .doute-card h3{color:#fff;font-size:clamp(1.3rem,2.5vw,1.8rem);margin-bottom:14px;}
+  .doute-card p{color:rgba(255,255,255,0.78);font-size:1rem;line-height:1.7;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;}
+  .btn-white{background:#fff;color:var(--violet);}
+  .btn-white:hover{background:rgba(255,255,255,0.9);}
+  .doute-note{margin-top:12px;font-size:0.8rem;color:rgba(255,255,255,0.45);}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:48px 0 32px;}
+  .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px;}
+  .footer-brand .logo{color:#fff;}
+  .footer-brand p{margin-top:12px;font-size:0.88rem;max-width:260px;line-height:1.6;}
+  .footer-col h4{font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;}
+  .footer-col a,.footer-col p{display:block;font-size:0.88rem;margin-bottom:8px;color:rgba(255,255,255,0.65);transition:color .18s;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;font-size:0.78rem;color:rgba(255,255,255,0.35);}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(max-width:768px){
+    .offres-grid{grid-template-columns:1fr;}
+    .doute-card{padding:40px 28px;}
+    nav .btn{display:none;}
+    .footer-inner{grid-template-columns:1fr;}
+  }
+</style>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="logo.png" alt="Ad'eux Coaching"></a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="comment-ca-marche.html">Comment ça marche</a>
+        <a href="offres.html">Mes offres</a>
+        <a href="about.html">Mon histoire</a>
+        <a href="#doute" class="btn btn-violet">Échange offert</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container reveal">
+    <p class="eyebrow">L'accompagnement</p>
+    <h1>Deux façons d'avancer ensemble</h1>
+    <p>Selon là où tu en es et ce dont tu as besoin. L'appel découverte est toujours là pour t'aider à choisir.</p>
+  </div>
+</section>
+
+<section class="offres">
+  <div class="container">
+    <div class="offres-grid">
+
+      <!-- OFFRE 1 -->
+      <div class="offre-card offre-light reveal">
+        <div class="offre-header">
+          <span class="offre-tag">Pour commencer</span>
+          <h2>Session Boussole</h2>
+          <p class="offre-tagline">Une heure pour voir où tu en es vraiment.</p>
+        </div>
+        <div class="offre-body">
+          <p class="offre-desc">Tu sens que quelque chose doit changer, mais tu n'arrives pas à mettre le doigt dessus. Cette session est un espace pour faire le point, et repartir avec une direction.</p>
+          <ul>
+            <li>Une séance de 60 à 90 minutes en visio</li>
+            <li>Un espace pour poser ce que tu portes</li>
+            <li>Une piste concrète pour la suite</li>
+            <li>Un premier regard extérieur, bienveillant</li>
+          </ul>
+          <p class="offre-format"><span>⏱</span> 60–90 min <span>·</span> En visio <span>·</span> Séance unique</p>
+          <a href="mailto:contact@adeux-coaching.fr?subject=Échange découverte offert" class="btn btn-outline-dark">Réserver la session</a>
+        </div>
+      </div>
+
+      <!-- OFFRE 2 -->
+      <div class="offre-card offre-dark reveal">
+        <div class="offre-header">
+          <span class="offre-tag">Pour aller en profondeur</span>
+          <h2>Accompagnement 3 mois</h2>
+          <p class="offre-tagline">Un travail de fond, à ton rythme.</p>
+        </div>
+        <div class="offre-body">
+          <p class="offre-desc">Tu sais que tu veux changer quelque chose, mais le chemin n'est pas encore clair. Ou tu tournes en rond depuis trop longtemps. L'accompagnement sur 3 mois, c'est un espace pour démêler tout ça, et avancer.</p>
+          <ul>
+            <li>Un appel de cadrage pour poser les bases</li>
+            <li>4 à 6 séances individuelles d'1h en visio</li>
+            <li>Un suivi entre les séances</li>
+            <li>Une séance bilan pour ancrer ce qui a changé</li>
+          </ul>
+          <p class="offre-format"><span>⏱</span> 4 à 6 séances d'1h sur 3 mois <span>·</span> En visio</p>
+          <a href="#doute" class="btn btn-outline-white">Échanger sur l'accompagnement</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DOUTE -->
+<section class="doute" id="doute">
+  <div class="container">
+    <div class="doute-card reveal">
+      <h3>Pas sûre de ce qui te correspond&nbsp;?</h3>
+      <p>C'est souvent l'appel découverte qui répond à cette question.<br>30 minutes, sans engagement, pour qu'on se parle et qu'on voie ensemble ce dont tu as besoin.</p>
+      <a href="mailto:contact@adeux-coaching.fr?subject=Échange découverte offert" class="btn btn-white">Prendre rendez-vous</a>
+      <p class="doute-note">30 minutes · offert · sans engagement · 100% visio</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Ad'eux <span style="color:rgba(80,72,168,0.4)">Coaching</span></div>
+        <p>Coaching individuel pour femmes en transition professionnelle. 100% en visio.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Naviguer</h4>
+        <a href="index.html">Accueil</a>
+        <a href="comment-ca-marche.html">Comment ça marche</a>
+        <a href="offres.html">Mes offres</a>
+        <a href="about.html">Mon histoire</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>contact@adeux-coaching.fr</p>
+        <a href="#doute">Réserver un échange gratuit</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ad'eux Coaching. Tous droits réservés.</span>
+      <span>Mentions légales · Politique de confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target);}});
+  },{threshold:0.1});
+  reveals.forEach(el=>io.observe(el));
+  // Failsafe : ne jamais laisser le contenu masqué (ex. IntersectionObserver bridé)
+  function _snap(el){el.style.transition='none';el.classList.add('in');}
+  function _revealVisible(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top < window.innerHeight) _snap(el);});}
+  window.addEventListener('load', _revealVisible);
+  setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(_snap);}, 1500);
+</script>
+</body>
+</html>

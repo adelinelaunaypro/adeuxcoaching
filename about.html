@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon histoire · Ad'eux Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Adeline, professionnelle RH depuis plus de dix ans et coach certifiée ICF Niveau 2. Mon histoire et ce qui fonde ma pratique du coaching.">
+<meta name="author" content="Ad'eux Coaching">
+<link rel="canonical" href="https://adeux-coaching.fr/about.html">
+<meta name="theme-color" content="#FAEEDA">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Ad'eux Coaching">
+<meta property="og:title" content="Mon histoire · Ad'eux Coaching">
+<meta property="og:description" content="Adeline, professionnelle RH depuis plus de dix ans et coach certifiée ICF Niveau 2. Mon histoire et ce qui fonde ma pratique du coaching.">
+<meta property="og:url" content="https://adeux-coaching.fr/about.html">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --cream:#FAEEDA;--cream-deep:#F2E2C5;--terracotta:#C85A2A;--terracotta-soft:rgba(200,90,42,0.2);
+    --violet:#5048A8;--violet-deep:#3B3580;--ink:#332B22;--ink-soft:#6B6357;--ink-faint:rgba(51,43,34,0.38);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--cream);color:var(--ink);font-family:'Jost',sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.18;}
+  .container{max-width:1100px;margin:0 auto;padding:0 32px;}
+  .eyebrow{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);}
+  .btn{display:inline-block;font-family:'Jost',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:14px 32px;border-radius:3px;cursor:pointer;transition:all .22s ease;}
+  .btn-violet{background:var(--violet);color:#fff;}
+  .btn-violet:hover{background:var(--violet-deep);}
+  .btn-outline{border:1.5px solid var(--violet);color:var(--violet);}
+  .btn-outline:hover{background:var(--violet);color:#fff;}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid rgba(51,43,34,0.1);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .logo{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;}
+  .logo span{color:var(--violet);}
+  .logo img{height:36px;width:auto;display:block;}
+  nav{display:flex;gap:32px;align-items:center;}
+  nav a{font-size:0.88rem;font-weight:500;color:var(--ink-soft);transition:color .18s;}
+  nav a:hover{color:var(--violet);}
+
+  /* HERO ABOUT */
+  .about-hero{padding:72px 0 64px;}
+  .about-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+  .about-photo{aspect-ratio:3/4;background:var(--cream-deep);border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+  .about-photo-placeholder{color:var(--ink-faint);font-size:0.85rem;text-align:center;padding:20px;}
+  .about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 8%;}
+  .photo-caption{margin-top:12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--ink-faint);text-align:center;}
+  .about-intro .eyebrow{margin-bottom:14px;}
+  .about-intro h1{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:20px;}
+  .about-intro .lead{font-size:1.08rem;color:var(--ink-soft);line-height:1.75;margin-bottom:24px;}
+  .about-intro blockquote{border-left:2px solid var(--terracotta);padding-left:20px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--ink);margin:28px 0;}
+
+  /* TIMELINE */
+  .timeline{padding:72px 0;}
+  .timeline-head{text-align:center;max-width:520px;margin:0 auto 56px;}
+  .timeline-head h2{font-size:clamp(1.5rem,2.8vw,2rem);margin-top:10px;}
+  .tl-items{max-width:700px;margin:0 auto;position:relative;}
+  .tl-items::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--terracotta) 0%,var(--terracotta) 50%,var(--violet) 100%);opacity:0.3;}
+  .tl-item{display:flex;gap:36px;margin-bottom:52px;position:relative;}
+  .tl-item:last-child{margin-bottom:0;}
+  .tl-dot{width:42px;height:42px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;z-index:1;}
+  .tl-dot-terra{background:var(--cream-deep);border:2px solid var(--terracotta);}
+  .tl-dot-violet{background:var(--cream-deep);border:2px solid var(--violet);}
+  .tl-dot svg{width:16px;height:16px;}
+  .tl-body{padding-top:4px;}
+  .tl-era{font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--terracotta);margin-bottom:6px;}
+  .tl-era.v{color:var(--violet);}
+  .tl-body h3{font-size:1.12rem;margin-bottom:8px;}
+  .tl-body p{color:var(--ink-soft);font-size:0.95rem;line-height:1.7;}
+
+  /* PULL QUOTE */
+  .pull-section{background:var(--cream-deep);padding:72px 0;border-top:1px solid var(--terracotta-soft);border-bottom:1px solid var(--terracotta-soft);}
+  .pull-inner{max-width:640px;margin:0 auto;text-align:center;}
+  .pull-inner blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,2.8vw,1.85rem);color:var(--ink);line-height:1.45;margin-bottom:16px;}
+  .pull-inner cite{font-size:0.85rem;color:var(--ink-faint);}
+
+  /* CREDENTIALS */
+  .credentials{padding:72px 0;}
+  .credentials-head{text-align:center;max-width:480px;margin:0 auto 44px;}
+  .credentials-head h2{font-size:clamp(1.4rem,2.5vw,1.9rem);margin-top:10px;}
+  .creds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .cred-card{background:#fff;border-radius:4px;padding:28px 24px;text-align:center;border:1px solid rgba(51,43,34,0.08);}
+  .cred-icon{width:44px;height:44px;background:var(--cream-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+  .cred-card h3{font-size:1rem;margin-bottom:8px;}
+  .cred-card p{color:var(--ink-soft);font-size:0.88rem;line-height:1.5;}
+
+  /* FINAL CTA */
+  .about-cta{padding:88px 0;text-align:center;}
+  .about-cta h2{font-size:clamp(1.6rem,3vw,2.2rem);max-width:480px;margin:14px auto 16px;}
+  .about-cta p{color:var(--ink-soft);max-width:400px;margin:0 auto 32px;}
+  .about-cta-note{margin-top:12px;font-size:0.82rem;color:var(--ink-faint);}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:48px 0 32px;}
+  .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px;}
+  .footer-brand .logo{color:#fff;}
+  .footer-brand p{margin-top:12px;font-size:0.88rem;max-width:260px;line-height:1.6;}
+  .footer-col h4{font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;}
+  .footer-col a,.footer-col p{display:block;font-size:0.88rem;margin-bottom:8px;color:rgba(255,255,255,0.65);transition:color .18s;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;font-size:0.78rem;color:rgba(255,255,255,0.35);}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(max-width:768px){
+    .about-hero-inner{grid-template-columns:1fr;}
+    .creds-grid{grid-template-columns:1fr;}
+    nav .btn{display:none;}
+    .footer-inner{grid-template-columns:1fr;}
+  }
+</style>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="logo.png" alt="Ad'eux Coaching"></a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="comment-ca-marche.html">Comment ça marche</a>
+        <a href="offres.html">Mes offres</a>
+        <a href="about.html">Mon histoire</a>
+        <a href="#about-cta" class="btn btn-violet">Échange offert</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO ABOUT -->
+<section class="about-hero">
+  <div class="container">
+    <div class="about-hero-inner">
+      <div class="reveal">
+        <div class="about-photo">
+          <img src="adeline3.jpg" alt="Adeline enceinte, dans un champ de blé">
+        </div>
+        <p class="photo-caption">Avant de comprendre que je ne reviendrais pas tout à fait la même.</p>
+      </div>
+      <div class="about-intro reveal">
+        <p class="eyebrow">Mon histoire</p>
+        <h1>J'ai vécu ce moment où plus rien ne rentre à sa place.</h1>
+        <p class="lead">Je m'appelle Adeline. Je suis professionnelle RH depuis plus de dix ans, et coach certifiée ICF Niveau 2. Ces deux identités coexistent, et c'est précisément ce qui fait la force de mon accompagnement.</p>
+        <blockquote>"Je ne cherchais pas à redevenir celle que j'étais avant. Je cherchais à comprendre qui j'étais en train de devenir."</blockquote>
+        <a href="#about-cta" class="btn btn-violet">On se parle ?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline">
+  <div class="container">
+    <div class="timeline-head reveal">
+      <p class="eyebrow">Le chemin parcouru</p>
+      <h2>D'où je viens, et où j'en suis.</h2>
+    </div>
+    <div class="tl-items">
+
+      <div class="tl-item reveal">
+        <div class="tl-dot tl-dot-terra">
+          <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" fill="#C85A2A"/></svg>
+        </div>
+        <div class="tl-body">
+          <div class="tl-era">L'avant</div>
+          <h3>Plus de dix ans dans les ressources humaines</h3>
+          <p>J'ai construit ma carrière dans les RH, un ancrage solide, une expertise du monde du travail, une compréhension fine de ce que vivent les professionnels au quotidien. Ce n'est pas un chapitre fermé : c'est ce que j'apporte dans chaque accompagnement.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot tl-dot-terra">
+          <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" fill="#C85A2A"/></svg>
+        </div>
+        <div class="tl-body">
+          <div class="tl-era">Le tournant</div>
+          <h3>Le retour de congé maternité</h3>
+          <p>Je suis revenue au travail et j'ai vécu exactement ce que vivent les femmes que j'accompagne aujourd'hui : ce sentiment étrange que tout est pareil, mais que moi, je ne suis plus tout à fait la même. Rien ne l'avait préparé à ça.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot tl-dot-violet">
+          <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" fill="#5048A8"/></svg>
+        </div>
+        <div class="tl-body">
+          <div class="tl-era v">Le déclic</div>
+          <h3>La formation coach, ICF Niveau 2</h3>
+          <p>J'ai décidé de me former au coaching, non pas pour quitter les RH, mais pour aller plus loin. Le coaching m'a donné les outils pour accompagner ce que j'avais vécu, et ce que je voyais autour de moi. La certification ICF Niveau 2 valide une pratique rigoureuse, éthique, et ancrée dans l'écoute.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot tl-dot-violet">
+          <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" fill="#5048A8"/></svg>
+        </div>
+        <div class="tl-body">
+          <div class="tl-era v">Aujourd'hui</div>
+          <h3>RH et coach, les deux, ensemble</h3>
+          <p>Je continue d'exercer dans les ressources humaines tout en développant ma pratique du coaching individuel. Ce n'est pas une contradiction, c'est une complémentarité. Mon expertise RH nourrit mon regard de coach. Et ma pratique du coaching enrichit ma compréhension du travail humain.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="pull-section">
+  <div class="container">
+    <div class="pull-inner reveal">
+      <blockquote>"Ce n'est pas une crise. C'est une invitation à te réinventer."</blockquote>
+      <cite>Ce que j'aurais aimé qu'on me dise à mon retour de congé maternité</cite>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="credentials">
+  <div class="container">
+    <div class="credentials-head reveal">
+      <p class="eyebrow">Mon expertise</p>
+      <h2>Ce qui fonde ma pratique</h2>
+    </div>
+    <div class="creds-grid">
+      <div class="cred-card reveal">
+        <div class="cred-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.39 4.84L18 7.64l-4 3.9.94 5.5L10 14.27l-4.94 2.77.94-5.5-4-3.9 5.61-.8L10 2z" fill="#5048A8"/></svg>
+        </div>
+        <h3>Certification ICF Niveau 2</h3>
+        <p>Une formation rigoureuse et reconnue internationalement, qui garantit une pratique éthique et structurée du coaching professionnel.</p>
+      </div>
+      <div class="cred-card reveal">
+        <div class="cred-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="2" stroke="#5048A8" stroke-width="1.5"/><path d="M7 8h6M7 11h4" stroke="#5048A8" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Master Droit du travail</h3>
+        <p>Une solide formation juridique qui nourrit ma compréhension du monde professionnel, les droits, les contraintes, les enjeux réels du travail.</p>
+      </div>
+      <div class="cred-card reveal">
+        <div class="cred-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#5048A8" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="#5048A8" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>10+ ans en ressources humaines</h3>
+        <p>Une expérience de terrain qui me permet de te parler de ta réalité professionnelle sans détour, parce que je la connais de l'intérieur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="about-cta" id="about-cta">
+  <div class="container reveal">
+    <p class="eyebrow">Prochaine étape</p>
+    <h2>On se rencontre ?</h2>
+    <p>30 minutes en visio, sans engagement, pour voir si on est faites pour travailler ensemble.</p>
+    <a href="mailto:contact@adeux-coaching.fr?subject=Échange découverte offert" class="btn btn-violet">Réserver mon échange offert</a>
+    <p class="about-cta-note">30 minutes · offert · sans engagement · 100% visio</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Ad'eux <span style="color:rgba(80,72,168,0.4)">Coaching</span></div>
+        <p>Coaching individuel pour femmes en transition professionnelle. 100% en visio.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Naviguer</h4>
+        <a href="index.html">Accueil</a>
+        <a href="comment-ca-marche.html">Comment ça marche</a>
+        <a href="offres.html">Mes offres</a>
+        <a href="about.html">Mon histoire</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>contact@adeux-coaching.fr</p>
+        <a href="#about-cta">Réserver un échange gratuit</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ad'eux Coaching. Tous droits réservés.</span>
+      <span>Mentions légales · Politique de confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target);}});
+  },{threshold:0.1});
+  reveals.forEach(el=>io.observe(el));
+  // Failsafe : ne jamais laisser le contenu masqué (ex. IntersectionObserver bridé)
+  function _snap(el){el.style.transition='none';el.classList.add('in');}
+  function _revealVisible(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top < window.innerHeight) _snap(el);});}
+  window.addEventListener('load', _revealVisible);
+  setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(_snap);}, 1500);
+</script>
+</body>
+</html>
